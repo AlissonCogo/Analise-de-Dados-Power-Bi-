@@ -9,36 +9,41 @@ O DashBoard Possui Filtros de Ano, Produtos e Marca(Cachorro, gatito)!
 
 # Estrutura da base de dados
 
-Arquivo em excel que contém inicialmente as seguintes colunas:
+## Arquivo em Excel que contém inicialmente as seguintes colunas:
 
-Vendas:
+### Vendas:
 - Data da Compras
-- Faturamento Total
-- ID Consumidor
+- - ID Consumidor
 - Id Produto
 - Quantidade
 - Transacao
-- Valor Unitário Produto
 
-Produtos:
+#### Criado 2 nova **Coluna** a partir dos dados:
+- Valor Unitário Produto (Valor Unitário Produto = RELATED(Produtos[Valor]))
+- Faturamento Total (Faturamento Total = Vendas[Quantidade] * Vendas[Valor Unitário Produto])
+
+### Produtos:
 - Categoria
 - ID Produto
 - Marca
 - Nome Produto
 - Url img
 - Valor
-- Valor Médio Por Produto 
 
-Arquivo em csv que contém inicialmente as seguintes colunas:
+#### Criado 1 nova **Medida** a partir dos dados:
+- Valor Médio Por Produto (Valor Médio Por Produto = SUM(Produtos[Valor]) / COUNT(Produtos[ID Produto]))
 
-Clientes:
+
+## Arquivo em Csv que contém inicialmente as seguintes colunas:
+
+### Clientes:
 - Bairro
-- Estado CIvil
+- Estado Civil
 - Gênero
 - ID Consumidor
 - Pets
 
-  
+#### Não foi Criado nenhuma Coluna/Medida a partir dos dados  
 
 
 
